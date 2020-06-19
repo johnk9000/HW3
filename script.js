@@ -1,5 +1,5 @@
 // *Production Script* Please goto `./Develop/script-dev1.js` for Annotations
-
+//---------------------------------------------------------------------------
 var pwdLength = 0;
 var pwdCase = false;
 var pwdNumeric = false;
@@ -9,6 +9,19 @@ var pwdLength = prompt("How long do you want your password to be? Choose a # bet
 var pwdCase = confirm("CaSe SeNSitIVitY?");
 var pwdNumeric = confirm("α-numeric? (do you want numbers?)")
 var pwdSpec = confirm("$P⁅¢IAL characters?")
+
+// Input validation
+if(Number.isInteger(parseInt(pwdLength)) === false) {
+    alert("input a number");
+    location.reload();
+} else {
+pwdLength = parseInt(pwdLength); //parse string input into integer form
+}
+
+if (pwdLength < 8 || pwdLength > 128) {
+    alert("re-read the range!");
+    location.reload();
+} else {
 
 var password = "Error!";
 
@@ -52,36 +65,30 @@ var MasterPass = [];
         var index = RandomInt(MasterVector.length - 1);
         
         MasterPass.push(MasterVector[index]);
-
-        console.log(MasterPass);
     }
-console.log("finally: " + MasterPass);
 
 return MasterPass.join('');
 }
 
-if(pwdCase === true && pwdNumeric === false && pwdSpec === false){
+if(pwdCase === true && pwdNumeric === false && pwdSpec === false){ //case sensitive alphabetic pass
     Vect = caseVect;
-    console.log("first cond");
 
-} else if(pwdCase === true && pwdNumeric === true && pwdSpec === false) {
+} else if(pwdCase === true && pwdNumeric === true && pwdSpec === false) { //case sens. alphanumeric pass
     Vect = numVect;
-    console.log("second cond");
 
-} else if(pwdCase === true && pwdNumeric === true && pwdSpec === true) {
+} else if(pwdCase === true && pwdNumeric === true && pwdSpec === true) { //case sens. alphanumeric special pass
     Vect = specVect;
-    console.log("third cond");
 
-} else if(pwdCase === false && pwdNumeric === true && pwdSpec === true) {
+} else if(pwdCase === false && pwdNumeric === true && pwdSpec === true) { //alphanuemeric special pass
     Vect = specVectnoCase;
 
-} else if(pwdCase === false && pwdNumeric === false && pwdSpec === true) {
+} else if(pwdCase === false && pwdNumeric === false && pwdSpec === true) { //alphabetic special pass
     Vect = specVectnoCasenoNum;
 
-} else if(pwdCase === true && pwdNumeric === false && pwdSpec === true) {
+} else if(pwdCase === true && pwdNumeric === false && pwdSpec === true) { //case sensitive special pass
     Vect = specVectnoNum;
 
-} else if(pwdCase === false && pwdNumeric === false && pwdSpec === true) {
+} else if(pwdCase === false && pwdNumeric === false && pwdSpec === true) { //alphabetic special pass
     Vect = specVectnoCasenoNum;
 
 } else {
@@ -89,10 +96,9 @@ if(pwdCase === true && pwdNumeric === false && pwdSpec === false){
     } 
 
 function writePassword() {
-        // Conditional Tree for different input values
-
     var password = generatePassword(Vect);            
     var passwordText = document.querySelector("#password");            
     passwordText.value = password;
 
+}
 }
