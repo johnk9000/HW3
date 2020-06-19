@@ -1,5 +1,7 @@
 # Password Generator Exercise [HW#3]
  
+ Solution URL: https://johnk9000.github.io/HW3/
+ 
  In this exercise we generated a password between 8 and 128 characters in length defined via the input of a pop-up prompt.
 
  Sequentially, the program will ask `yes` or `no` for 'Case Sensitivity' (adds capital letters), 'Alphanumeric' (adds numbers), and 'Special Characters' (implicit) in that order.
