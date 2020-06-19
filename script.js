@@ -6,7 +6,6 @@ var pwdNumeric = false;
 
 //Prompts for length -> Case Sensitivity -> alphanumeric -> special characters
 var pwdLength = prompt("How long do you want your password to be? Choose a # between 8 and 128");
-pwdLength = parseInt(pwdLength); //parse string input into integer form
 var pwdCase = confirm("CaSe SeNSitIVitY?");
 var pwdNumeric = confirm("α-numeric? (do you want numbers?)")
 var pwdSpec = confirm("$P⁅¢IAL characters?")
