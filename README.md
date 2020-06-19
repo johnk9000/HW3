@@ -1,4 +1,31 @@
-# 03 JavaScript: Password Generator
+# Password Generator Exercise [HW#3]
+ 
+ In this exercise we generated a password between 8 and 128 characters in length defined via the input of a pop-up prompt.
+
+ Sequentially, the program will ask `yes` or `no` for 'Case Sensitivity' (adds capital letters), 'Alphanumeric' (adds numbers), and 'Special Characters' (implicit) in that order.
+
+ This will then generate the character set that satisfies the parameters specified.
+
+ User will click the `Generate Password` button which triggers the series of functions that generates the password, and writes it into the textbox.
+
+## Debugging
+Please goto 'Develop/script.dev1.js' to read annotations and run debugging on console.  Logs will be generated as necessary for the following custom functions:
+```
+* RandomInt(max) - random integer generator.
+
+* Password Generator Draft - recursion used to test and display contents of character sets.
+
+* generatePassword() - generation of password within specified parameters.
+
+* Conditional tree - console will display which condition block satisfied requirements.
+```
+
+## Release Notes
+
+* Version 1 is live! Enjoy!
+
+
+# Instructor Instructions: 03 JavaScript: Password Generator
 
 Create an application that generates a random password based on user-selected criteria. This app will run in the browser and feature dynamically updated HTML and CSS powered by your JavaScript code. It will also feature a clean and polished user interface and be responsive, ensuring that it adapts to multiple screen sizes.
 

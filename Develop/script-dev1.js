@@ -76,7 +76,7 @@ function RandomInt(max) {
 
 // First draft of password generator
 for(i = 0; i < 10; i++) {
-  var MasterVector = specVect;
+  var MasterVector = Vanilla;
   var entry = RandomInt(MasterVector.length - 1);
 
  console.log(entry);
