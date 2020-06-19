@@ -10,7 +10,7 @@
 
 ## Debugging
 Please goto 'Develop/script.dev1.js' to read annotations and run debugging on console.  Logs will be generated as necessary for the following custom functions:
-```
+
 * RandomInt(max) - random integer generator.
 
 * Password Generator Draft - recursion used to test and display contents of character sets.
@@ -18,7 +18,7 @@ Please goto 'Develop/script.dev1.js' to read annotations and run debugging on co
 * generatePassword() - generation of password within specified parameters.
 
 * Conditional tree - console will display which condition block satisfied requirements.
-```
+
 
 ## Release Notes
 
